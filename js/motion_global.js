@@ -7,7 +7,7 @@ $(document).ready(function () {
   var sidebarToggleLine3rd = $('.sidebar-toggle-line-last');
   var sidebar = $('.sidebar');
 
-  var SIDEBAR_WIDTH = '320px';
+  var SIDEBAR_WIDTH = '250px';
   var SIDEBAR_DISPLAY_DURATION = 300;
 
   var sidebarToggleLineStatusInit = {width: '100%', opacity: 1, left: 0, rotateZ: 0, top: 0};
@@ -65,8 +65,7 @@ $(document).ready(function () {
     ];
 
     isMist() && sequence.push(
-        { e: $('.logo-line-before i'), p: { translateX: "100%" }, o: { duration: 500, sequenceQueue: false } },
-        { e: $('.logo-line-after i'), p: { translateX: "-100%" }, o: { duration: 500, sequenceQueue: false } }
+
     );
 
     sequence.push({ e: $('.site-title'), p: { opacity: 1, top: 0 }, o: { duration: 200 } });
@@ -168,3 +167,4 @@ $(document).ready(function () {
     });
   }
 });
+

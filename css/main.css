@@ -886,7 +886,7 @@ body {
 }
 .menu .menu-item a {
   display: block;
-  font-size: 13px;
+  font-size: 15px;
   text-transform: capitalize;
   line-height: 1.5;
   border-bottom: 1px solid transparent;
@@ -982,6 +982,11 @@ body {
   height: auto;
   border: 2px solid #333;
   padding: 2px;
+  border-radius: 50%;
+  -webkit-transition: 1.4s all;
+  -moz-transition: 1.4s all;
+  -ms-transition: 1.4s all;
+  transition: 1.4s all;
 }
 .site-author-name {
   margin: 5px 0 0;
@@ -1055,7 +1060,7 @@ body {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ee746a;
+  background: #11a6ac;
 }
 .sidebar-nav {
   margin: 0;
@@ -2120,7 +2125,7 @@ ul li {
 }
 .posts-expand .post-title {
   font-size: 28px;
-  font-weight: 300;
+  font-weight: 600;
 }
 .posts-expand .post-body img {
   margin: 0;
