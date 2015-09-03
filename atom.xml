@@ -4,7 +4,7 @@
   <subtitle><![CDATA[杂七杂八]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://kuaipao.githib.io/"/>
-  <updated>2015-09-03T10:12:29.000Z</updated>
+  <updated>2015-09-03T16:51:08.000Z</updated>
   <id>http://kuaipao.githib.io/</id>
   
   <author>
@@ -13,6 +13,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Mac OSX svn版本升级]]></title>
+    <link href="http://kuaipao.githib.io/2015/mac-svn-update/"/>
+    <id>http://kuaipao.githib.io/2015/mac-svn-update/</id>
+    <published>2015-09-03T15:13:26.000Z</published>
+    <updated>2015-09-03T16:51:08.000Z</updated>
+    <content type="html"><![CDATA[<p>Mac OSX 自带的svn client版本比较低，网上看了一些升级svn的方法，但是当OSX系统升级后会还原。下面记录了自己的升级方法。</p>
+<p>svn版本过低的错误提示</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">This client is too old to work with the working copy at</span><br><span class="line"></span><br><span class="line">The working copy requires a newer version of Subversion</span><br></pre></td></tr></table></figure>
+<h3 id="安装svn">安装svn</h3><p>使用<a href="http://brew.sh/index_zh-cn.html" target="_blank" rel="external">brew</a>安装最新的svn客户端<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install subversion</span><br></pre></td></tr></table></figure></p>
+<p>安装路径为<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/<span class="built_in">local</span>/Cellar/subversion/</span><br></pre></td></tr></table></figure></p>
+<h3 id="替换系统svn">替换系统svn</h3><p>通过修改 <strong>~/.zshrc</strong> 文件内容替换原svn客户端，前提是安装了<a href="https://github.com/robbyrussell/oh-my-zsh" target="_blank" rel="external">zsh</a>。(如果没有安装zsh，系统默认shell是bash 需要修改 <strong>~/.bash_profile</strong> 或 <strong>~/.bashrc</strong>)。</p>
+<p>注意：不推荐使用 ln -s 软链接替换的方式。有时mac一些大的升级会复盖掉 <strong>/usr/bin</strong> <strong>/usr/local/bin</strong>下的文件</p>
+<p>在zshrc的尾部加上下面代码，注意将1.8.13换成安装的版本号<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">alias</span> svn=<span class="string">'/usr/local/Cellar/subversion/1.8.13/bin/svn'</span></span><br></pre></td></tr></table></figure></p>
+<p>保存修改的文件，使用 su 用户名重新登陆，或是重新开启shell即生效。查看svn版本号</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">➜  kuaipao  svn --version</span><br><span class="line">svn, version <span class="number">1.8</span>.<span class="number">13</span> (r1667537)</span><br><span class="line">   compiled Jun  <span class="number">5</span> <span class="number">2015</span>, <span class="number">19</span>:<span class="number">21</span>:<span class="number">21</span> on x86_64-apple-darwin14.<span class="number">3.0</span></span><br></pre></td></tr></table></figure>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Mac OSX 自带的svn client版本比较低，网上看了一些升级svn的方法，但是当OSX系统升级后会还原。下面记录了自己的升级方法。</p>
+<p>svn版本过低的错误提示</p>
+<figure class="highlight bash"><table><tr>]]>
+    </summary>
+    
+      <category term="mac" scheme="http://kuaipao.githib.io/tags/mac/"/>
+    
+      <category term="svn" scheme="http://kuaipao.githib.io/tags/svn/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[start]]></title>
