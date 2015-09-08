@@ -40,18 +40,18 @@
 
 
 <meta name="description" content="在gitbook下载的书上传到kindle paper时，字体颜色全部显示为灰色，基本无法正常阅读了。查看了gitbook的代码发现是css问题
-解决方法1下载epub格式(因为calibre无法编辑mobi格式)，使用calibre编辑书籍-&amp;gt;样式-&amp;gt;stylesheet.css 修改 .page 样式 color: #333; 改为 color: #000; 并保存。转换书籍为mobi格式然后">
+2015.9.8更新https://github.com/GitbookIO/gitbook/pull/904pull request 个小修改到 gitbook 官方，已合并到 master。新制作的mobi、epub书籍会修复这个问题。如果下载的书籍">
 <meta property="og:type" content="article">
 <meta property="og:title" content="解决gitbook下载书在kindle上字体颜色为灰色">
 <meta property="og:url" content="http://kuaipao.githib.io/2015/gitbook-use-black-font-on-kindle/index.html">
 <meta property="og:site_name" content="快跑啊">
 <meta property="og:description" content="在gitbook下载的书上传到kindle paper时，字体颜色全部显示为灰色，基本无法正常阅读了。查看了gitbook的代码发现是css问题
-解决方法1下载epub格式(因为calibre无法编辑mobi格式)，使用calibre编辑书籍-&amp;gt;样式-&amp;gt;stylesheet.css 修改 .page 样式 color: #333; 改为 color: #000; 并保存。转换书籍为mobi格式然后">
-<meta property="og:updated_time" content="2015-09-07T19:34:00.000Z">
+2015.9.8更新https://github.com/GitbookIO/gitbook/pull/904pull request 个小修改到 gitbook 官方，已合并到 master。新制作的mobi、epub书籍会修复这个问题。如果下载的书籍">
+<meta property="og:updated_time" content="2015-09-08T08:33:32.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="解决gitbook下载书在kindle上字体颜色为灰色">
 <meta name="twitter:description" content="在gitbook下载的书上传到kindle paper时，字体颜色全部显示为灰色，基本无法正常阅读了。查看了gitbook的代码发现是css问题
-解决方法1下载epub格式(因为calibre无法编辑mobi格式)，使用calibre编辑书籍-&amp;gt;样式-&amp;gt;stylesheet.css 修改 .page 样式 color: #333; 改为 color: #000; 并保存。转换书籍为mobi格式然后">
+2015.9.8更新https://github.com/GitbookIO/gitbook/pull/904pull request 个小修改到 gitbook 官方，已合并到 master。新制作的mobi、epub书籍会修复这个问题。如果下载的书籍">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -241,6 +241,7 @@
 
       
         <span itemprop="articleBody"><p>在gitbook下载的书上传到kindle paper时，字体颜色全部显示为灰色，基本无法正常阅读了。查看了<a href="https://github.com/GitbookIO/gitbook/blob/13fb949d6818bc47a2215ee788c392fa38e1e1d6/theme/stylesheets/ebook.less#L42" target="_blank" rel="external">gitbook</a>的代码发现是css问题</p>
+<h3 id="2015-9-8更新">2015.9.8更新</h3><p><a href="https://github.com/GitbookIO/gitbook/pull/904" target="_blank" rel="external">https://github.com/GitbookIO/gitbook/pull/904</a><br>pull request 个小修改到 gitbook 官方，已合并到 master。新制作的mobi、epub书籍会修复这个问题。<br>如果下载的书籍还是灰色字体，可以使用下面两个方法解决。</p>
 <h3 id="解决方法1">解决方法1</h3><p>下载epub格式(因为calibre无法编辑mobi格式)，使用calibre编辑书籍->样式->stylesheet.css 修改 .page 样式 color: #333; 改为 color: #000; 并保存。转换书籍为mobi格式然后推送至kindle。</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.page</span> <span class="rules">&#123;</span><br><span class="line"><span class="rule"><span class="attribute">-ms-text-size-adjust</span>:<span class="value"> <span class="number">100%</span></span></span>;</span><br><span class="line"><span class="rule"><span class="attribute">-webkit-text-size-adjust</span>:<span class="value"> <span class="number">100%</span></span></span>;</span><br><span class="line"><span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#000</span></span></span>;</span><br><span class="line"><span class="rule"><span class="attribute">display</span>:<span class="value"> block</span></span>;</span><br><span class="line"><span class="rule"><span class="attribute">font-family</span>:<span class="value"> sans-serif</span></span>;</span><br><span class="line"><span class="rule"><span class="attribute">line-height</span>:<span class="value"> <span class="number">1.6</span></span></span>;</span><br><span class="line"><span class="rule"><span class="attribute">overflow</span>:<span class="value"> hidden</span></span>;</span><br><span class="line"><span class="rule"><span class="attribute">word-wrap</span>:<span class="value"> break-word</span><br><span class="line">&#125;</span></span></span></span><br></pre></td></tr></table></figure>
 <h3 id="解决方法2">解决方法2</h3><p>直接转换为azw3格式，但推送麻烦</p>
@@ -417,7 +418,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#解决方法1"><span class="nav-number">1.</span> <span class="nav-text">解决方法1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决方法2"><span class="nav-number">2.</span> <span class="nav-text">解决方法2</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#2015-9-8更新"><span class="nav-number">1.</span> <span class="nav-text">2015.9.8更新</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决方法1"><span class="nav-number">2.</span> <span class="nav-text">解决方法1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决方法2"><span class="nav-number">3.</span> <span class="nav-text">解决方法2</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
